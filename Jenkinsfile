@@ -13,6 +13,11 @@ pipeline {
 		steps {
 			echo "Compiling the java files"
 			bat '''
+			echo "PATH is:" echo %PATH%
+
+			echo "JAVA_HOME is:" echo %JAVA_HOME%
+
+			javac -version
 			javac -cp "C:\\Users\\craig\\Hamcrest\\hamcrest-all-1.3.jar";"C:\\Users\\craig\\Junit4\\junit-4.13-beta-1.jar"; "Student.java" "StudentTest.java"
 			'''
 		}
