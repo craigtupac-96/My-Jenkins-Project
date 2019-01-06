@@ -17,8 +17,8 @@ pipeline {
         }
         stage('Test') {
 		steps {
-			echo "Running the tests (todo)"
-			
+			echo "Running the tests"
+			bat 'java -cp "C:\\Users\\craig\\Hamcrest\\hamcrest-all-1.3.jar";"C:\\Users\\craig\\Junit4\\junit-4.13-beta-1.jar"; org.junit.runner.JUnitCore "StudentTest"'
 		}
         }
     }
